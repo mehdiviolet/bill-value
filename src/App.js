@@ -33,10 +33,17 @@ export default function App() {
 
   const selected = friends.find((fri) => fri.id === selectedFriend?.id);
 
-  function handleBalance() {
+  function handleBalance(value) {
     console.log(selected);
+    // setFriends((fri) =>
+    //   fri.id === selected.id ? [...fri, { balance: 100 }] : fri
+    // );
     setFriends((fri) =>
-      fri.id === selected.id ? [...fri, { balance: 100 }] : fri
+      fri.map((friend) =>
+        friend.id === selectedFriend.id
+          ? { ...friend, balance: friend.balance + value }
+          : friend
+      )
     );
   }
 
@@ -95,11 +102,7 @@ function Friend({ friend, handleSelection, selectedFriend }) {
         </p>
       )}
       {/* {(friend.balance = 0 && <p>You and {friend.name} are ...</p>)} */}
-      {friend.balance === 0 && (
-        <p>
-          {friend.name} owe you {Math.abs(friend.balance)}$
-        </p>
-      )}
+      {friend.balance === 0 && <p>You and {friend.name} are even</p>}
       <Button type="button" onClick={() => handleSelection(friend)}>
         {isSelected ? "close" : "select"}
       </Button>
@@ -156,7 +159,8 @@ function FormSplitBill({ selectedFriend, handleBalance }) {
 
   function handleBill(e) {
     e.preventDefault();
-    handleBalance();
+    const value = whoPay === "you" ? otherExp : -you;
+    handleBalance(value);
     console.log(e);
   }
   return (
