@@ -64,6 +64,7 @@ export default function App() {
         <FormSplitBill
           selectedFriend={selectedFriend}
           handleBalance={handleBalance}
+          key={selectedFriend.id}
         />
       )}
     </div>
@@ -136,7 +137,7 @@ function FormAddFriend({ setFriends }) {
   }
   return (
     <form className="form-add-friend" onSubmit={handleSubmit}>
-      <label>😀Friend name</label>
+      <label>😀 Friend name</label>
       <input
         type="text"
         value={name}
