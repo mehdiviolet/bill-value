@@ -137,7 +137,7 @@ function FormAddFriend({ setFriends }) {
   }
   return (
     <form className="form-add-friend" onSubmit={handleSubmit}>
-      <label>😀 Friend name</label>
+      <label>😀 Friendname</label>
       <input
         type="text"
         value={name}
