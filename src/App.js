@@ -173,7 +173,7 @@ function FormSplitBill({ selectedFriend, handleBalance }) {
         value={bill}
         onChange={(e) => setBill(Number(e.target.value))}
       />
-      <label htmlFor="">🕴️Your expense</label>
+      <label htmlFor="">🕴️ Your expense</label>
       <input
         type="text"
         value={you}
