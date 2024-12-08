@@ -183,7 +183,7 @@ function FormSplitBill({ selectedFriend, handleBalance }) {
       />
       <label htmlFor="">🧑‍🤝‍🧑 {selectedFriend.name}'s expense</label>
       <input type="text" disabled value={otherExp} />
-      <label htmlFor="">🤑Who is paying bill?</label>
+      <label htmlFor="">🤑 Who is paying bill?</label>
       <select
         name="expense"
         value={whoPay}
