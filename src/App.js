@@ -167,7 +167,7 @@ function FormSplitBill({ selectedFriend, handleBalance }) {
   return (
     <form className="form-split-bill" onSubmit={handleBill}>
       <h2>Split a bill with {selectedFriend.name}</h2>
-      <label htmlFor="">💸 Bill value </label>
+      <label htmlFor="">💸Bill value </label>
       <input
         type="text"
         value={bill}
