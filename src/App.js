@@ -181,7 +181,7 @@ function FormSplitBill({ selectedFriend, handleBalance }) {
           setYou(Number(e.target.value) > bill ? you : Number(e.target.value))
         }
       />
-      <label htmlFor="">🧑‍🤝‍🧑{selectedFriend.name}'s expense</label>
+      <label htmlFor="">🧑‍🤝‍🧑  {selectedFriend.name}'s expense</label>
       <input type="text" disabled value={otherExp} />
       <label htmlFor=""> 🤑 Who is paying bill?</label>
       <select
