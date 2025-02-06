@@ -144,7 +144,7 @@ function FormAddFriend({ setFriends }) {
         onChange={(e) => setName(e.target.value)}
       />
 
-      <label>📸Image url</label>
+      <label>📸 Image url</label>
       <input type="text" value={img} onChange={(e) => setImg(e.target.value)} />
       <Button type="button">Add</Button>
     </form>
@@ -167,7 +167,7 @@ function FormSplitBill({ selectedFriend, handleBalance }) {
   return (
     <form className="form-split-bill" onSubmit={handleBill}>
       <h2>Split a bill with {selectedFriend.name}</h2>
-      <label htmlFor=""> 💸Bill value </label>
+      <label htmlFor=""> 💸 Bill value </label>
       <input
         type="text"
         value={bill}
@@ -181,9 +181,9 @@ function FormSplitBill({ selectedFriend, handleBalance }) {
           setYou(Number(e.target.value) > bill ? you : Number(e.target.value))
         }
       />
-      <label htmlFor="">🧑‍🤝‍🧑{selectedFriend.name}'s expense</label>
+      <label htmlFor="">🧑‍🤝‍🧑 {selectedFriend.name}'s expense</label>
       <input type="text" disabled value={otherExp} />
-      <label htmlFor=""> 🤑Who is paying bill?</label>
+      <label htmlFor=""> 🤑 Who is paying bill?</label>
       <select
         name="expense"
         value={whoPay}
